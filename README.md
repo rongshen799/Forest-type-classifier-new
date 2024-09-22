@@ -12,23 +12,23 @@ Show pairplot of top features
 ## **Installation**
 
 1. **Clone this repository:**
-Copy
+
 ```python
 git clone https://github.com/rongshen799/Forest-type-classifier-new.git 
 cd forest-classifier
 ```
 2. **Install the required packages:**
-Copy
+
 ```python
 pip install -r txt/requirements.txt
 ```
 3. **Run the data preparation script:**
-Copy
+
 ```python
 python py/data_preparation.py
 ```
 4. **Train the model:**
-Copy
+
 ```python
 python py/model_training.py
 ```
