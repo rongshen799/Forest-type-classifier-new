@@ -55,26 +55,26 @@ Then open your web browser and go to http://localhost:8501
 
 `py/`: Contains the Python scripts for data preparation, model training, and the Streamlit application.
 
-- data_preparation.py: Script to download and preprocess the dataset.
+- `data_preparation.py`: Script to download and preprocess the dataset.
 
-- model_training.py: Script to train and save the machine learning models.
+- `model_training.py`: Script to train and save the machine learning models.
 
-- streamlit_app.py: Main Streamlit application for the web interface.
+- `streamlit_app.py`: Main Streamlit application for the web interface.
 
 `joblib/`: Stores the trained and compressed machine learning models.
 
-    Each `*_model_compressed.joblib` file is a serialized, compressed version of a trained model.
+- Each `*_model_compressed.joblib` file is a serialized, compressed version of a trained model.
     These files are loaded by the Streamlit app to make predictions.
 
-    `poly_compressed.joblib`: A serialized PolynomialFeatures object used for feature engineering.
+- `poly_compressed.joblib`: A serialized PolynomialFeatures object used for feature engineering.
 
 `Dockerfile`: Instructions for containerizing the app
 
 `txt/`: Contains text files related to project dependencies and versioning.
 
-    `requirements.txt`: List of Python dependencies required for the project.
+- `requirements.txt`: List of Python dependencies required for the project.
 
-    `sklearn_version.txt`: Specifies the version of scikit-learn used in the project.
+- `sklearn_version.txt`: Specifies the version of scikit-learn used in the project.
 
 **License**
 
