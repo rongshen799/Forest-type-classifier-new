@@ -55,11 +55,11 @@ Then open your web browser and go to http://localhost:8501
 
 `py/`: Contains the Python scripts for data preparation, model training, and the Streamlit application.
 
-    **data_preparation.py**: Script to download and preprocess the dataset.
+- data_preparation.py: Script to download and preprocess the dataset.
 
-    **model_training.py**: Script to train and save the machine learning models.
+- model_training.py: Script to train and save the machine learning models.
 
-    **streamlit_app.py**: Main Streamlit application for the web interface.
+- streamlit_app.py: Main Streamlit application for the web interface.
 
 `joblib/`: Stores the trained and compressed machine learning models.
 
