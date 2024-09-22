@@ -38,13 +38,13 @@ python model_training.py
 To run the Streamlit app locally:
 Copy
 ```python
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 To run the Docker container:
 Copy
 ```python
-docker build -t forest-type-classifier .
-docker run -p 8501:8501 forest-classifier
+docker build -t forest-type-classifier-new .
+docker run -p 8501:8501 forest-type-classifier-new
 
 ```
 Then open your web browser and go to http://localhost:8501
