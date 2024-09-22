@@ -14,7 +14,7 @@ Show pairplot of top features
 1. Clone this repository:
 Copy
 ```python
-git clone https://github.com/yourusername/forest-classifier.git
+git clone https://github.com/rongshen799/Forest-type-classifier-new.git 
 cd forest-classifier
 ```
 2. Install the required packages:
