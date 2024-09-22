@@ -1,46 +1,46 @@
-**Forest Cover Type Classifier**
+# **Forest Cover Type Classifier**
 
 This project is a web application that uses machine learning to classify forest cover types based on cartographic variables.
 
-**Features**
+## **Features**
 
 Predict forest cover type based on user input
 Visualize the distribution of forest cover types
 Display feature importance
 Show pairplot of top features
 
-**Installation**
+## **Installation**
 
-1. Clone this repository:
+1. **Clone this repository:**
 Copy
 ```python
 git clone https://github.com/rongshen799/Forest-type-classifier-new.git 
 cd forest-classifier
 ```
-2. Install the required packages:
+2. **Install the required packages:**
 Copy
 ```python
 pip install -r txt/requirements.txt
 ```
-3.Run the data preparation script:
+3. **Run the data preparation script:**
 Copy
 ```python
 python py/data_preparation.py
 ```
-4.Train the model:
+4. **Train the model:**
 Copy
 ```python
 python py/model_training.py
 ```
 
-**Usage**
+## **Usage**
 
-To run the Streamlit app locally:
+**To run the Streamlit app locally:**
 Copy
 ```python
 streamlit run streamlit_app.py
 ```
-To run the Docker container:
+**To run the Docker container:**
 Copy
 ```python
 docker build -t forest-type-classifier-new .
@@ -49,7 +49,7 @@ docker run -p 8501:8501 forest-type-classifier-new
 ```
 Then open your web browser and go to http://localhost:8501
 
-**Project Structure**
+## **Project Structure**
 
 `data/train.csv`: The full Covertype dataset
 
@@ -76,6 +76,6 @@ Then open your web browser and go to http://localhost:8501
 
 - `sklearn_version.txt`: Specifies the version of scikit-learn used in the project.
 
-**License**
+## **License**
 
 MIT
