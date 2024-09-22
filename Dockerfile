@@ -13,6 +13,10 @@ WORKDIR /streamlit_app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN pip install scikit-learn==1.3.0
+RUN pip install --no-cache-dir shap==0.46.0
+
+
 COPY . .
 
 EXPOSE 8501

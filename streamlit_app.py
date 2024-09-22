@@ -1,22 +1,37 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import sklearn
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures
 import shap
 
+encoder = OneHotEncoder(sparse_output=False)
+
+st.write(f"Current scikit-learn version: {sklearn.__version__}")
+st.write(f"NumPy version: {np.__version__}")
+st.write(f"SHAP version: {shap.__version__}")
+
+# 加载保存的版本信息
+try:
+    with open('sklearn_version.txt', 'r') as f:
+        saved_version = f.read().strip()
+    st.write(f"Model trained with scikit-learn version: {saved_version}")
+except FileNotFoundError:
+    st.write("Unable to find saved scikit-learn version information.")
+
+
 # Load models and preprocessing objects
 models = {
-    'RandomForest': joblib.load('RandomForest_model.joblib'),
-    'ExtraTrees': joblib.load('ExtraTrees_model.joblib'),
-    'LightGBM': joblib.load('LightGBM_model.joblib'),
-    'CatBoost': joblib.load('CatBoost_model.joblib'),
-    'VotingClassifier': joblib.load('VotingClassifier_model.joblib')
+    'RandomForest': joblib.load('RandomForest_model_compressed.joblib'),
+    'ExtraTrees': joblib.load('ExtraTrees_model_compressed.joblib'),
+    'LightGBM': joblib.load('LightGBM_model_compressed.joblib'),
+    'CatBoost': joblib.load('CatBoost_model_compressed.joblib'),
+    'VotingClassifier': joblib.load('VotingClassifier_model_compressed.joblib')
 }
-poly = joblib.load('poly.joblib')
-encoder = OneHotEncoder(sparse=False)
+poly = joblib.load('poly_compressed.joblib')
 
 # Load a sample of the dataset for visualization
 df = pd.read_csv('data/train.csv')

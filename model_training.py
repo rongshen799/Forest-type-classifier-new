@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import joblib
 from joblib import dump, load
 import os
+import sklearn
 
 from data_preparation import prepare_data  
 from data_preparation import augment_data  
@@ -75,3 +76,8 @@ if __name__ == "__main__":
     for name in models.keys():
         filename = f'{name}_model_compressed.joblib'
         print(f"{name} model size: {os.path.getsize(filename) / (1024 * 1024):.2f} MB")
+    
+        print("Preparing data...")
+    
+    with open('sklearn_version.txt', 'w') as f:
+        f.write(sklearn.__version__)
