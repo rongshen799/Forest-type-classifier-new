@@ -25,13 +25,13 @@ except FileNotFoundError:
 
 # Load models and preprocessing objects
 models = {
-    'RandomForest': joblib.load('RandomForest_model_compressed.joblib'),
-    'ExtraTrees': joblib.load('ExtraTrees_model_compressed.joblib'),
-    'LightGBM': joblib.load('LightGBM_model_compressed.joblib'),
-    'CatBoost': joblib.load('CatBoost_model_compressed.joblib'),
-    'VotingClassifier': joblib.load('VotingClassifier_model_compressed.joblib')
+    'RandomForest': joblib.load('joblib/RandomForest_model_compressed.joblib'),
+    'ExtraTrees': joblib.load('joblib/ExtraTrees_model_compressed.joblib'),
+    'LightGBM': joblib.load('joblib/LightGBM_model_compressed.joblib'),
+    'CatBoost': joblib.load('joblib/CatBoost_model_compressed.joblib'),
+    'VotingClassifier': joblib.load('joblib/VotingClassifier_model_compressed.joblib')
 }
-poly = joblib.load('poly_compressed.joblib')
+poly = joblib.load('joblib/poly_compressed.joblib')
 
 # Load a sample of the dataset for visualization
 df = pd.read_csv('data/train.csv')
